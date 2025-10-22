@@ -1,17 +1,12 @@
 import type { Address } from 'viem';
 
-const fallbackAddress: Address = '0x0000000000000000000000000000000000000000';
+// const fallbackAddress: Address = '0x0000000000000000000000000000000000000000';
 
-const envTaskGame = import.meta.env.VITE_TASK_GAME_ADDRESS as Address | undefined;
-export const TASK_GAME_ADDRESS: Address = envTaskGame && envTaskGame.startsWith('0x')
-  ? envTaskGame
-  : fallbackAddress;
+// const envTaskGame = import.meta.env.VITE_TASK_GAME_ADDRESS as Address | undefined;
+export const TASK_GAME_ADDRESS: Address = "0x00f2Fd86FE733aE631d4E771aE072A76F8d844Ee"
 
-const envCoin = import.meta.env.VITE_COIN_ADDRESS as Address | undefined;
-export const COIN_ADDRESS: Address = envCoin && envCoin.startsWith('0x')
-  ? envCoin
-  : fallbackAddress;
-
+// const envCoin = import.meta.env.VITE_COIN_ADDRESS as Address | undefined;
+export const COIN_ADDRESS: Address = "0xd4b72d6e5c72836a932aeED365b13C1220623f53"
 export const TASK_GAME_ABI = [
   {
     "inputs": [
