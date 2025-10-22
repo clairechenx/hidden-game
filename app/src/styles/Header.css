@@ -1,0 +1,43 @@
+.header {
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.35), rgba(15, 118, 110, 0.35));
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.header-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.header-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.header-subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(226, 232, 240, 0.85);
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    padding: 3rem 2rem 2.5rem;
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+  }
+}

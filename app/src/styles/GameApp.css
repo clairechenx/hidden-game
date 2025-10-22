@@ -1,0 +1,63 @@
+.game-app {
+  color: #e2e8f0;
+}
+
+.game-content {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.task-section {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.45);
+}
+
+.task-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.section-caption {
+  font-size: 0.95rem;
+  color: rgba(226, 232, 240, 0.75);
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.task-placeholder {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 1rem;
+  color: rgba(226, 232, 240, 0.6);
+}
+
+@media (min-width: 1024px) {
+  .game-content {
+    padding: 3rem 0 4rem;
+  }
+
+  .task-section {
+    padding: 2.5rem;
+  }
+}
