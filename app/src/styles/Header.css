@@ -1,6 +1,21 @@
 .header {
-  background: linear-gradient(135deg, rgba(30, 64, 175, 0.35), rgba(15, 118, 110, 0.35));
-  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.5), rgba(15, 118, 110, 0.5), rgba(88, 28, 135, 0.4));
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(168, 85, 247, 0.15) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .header-container {
@@ -11,33 +26,53 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .header-title-block {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.65rem;
 }
 
 .header-title {
   margin: 0;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #f8fafc;
+  background: linear-gradient(135deg, #f8fafc 0%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 20px rgba(59, 130, 246, 0.3);
+  letter-spacing: -0.02em;
 }
 
 .header-subtitle {
   margin: 0;
-  font-size: 1rem;
-  color: rgba(226, 232, 240, 0.85);
+  font-size: 1.05rem;
+  color: rgba(226, 232, 240, 0.9);
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 @media (min-width: 768px) {
   .header-container {
-    padding: 3rem 2rem 2.5rem;
+    padding: 3.5rem 2rem 3rem;
   }
 
   .header-title {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
+  }
+
+  .header-subtitle {
+    font-size: 1.15rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-title {
+    font-size: 3rem;
   }
 }
